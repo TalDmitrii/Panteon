@@ -1,0 +1,49 @@
+.flying-cost {
+  position: relative;
+
+  padding-top: 183px;
+  padding-bottom: 53px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  background-image: url("../img/start-rocket.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+  }
+}
+
+.flying-cost__text {
+  @media (min-width: @tablet-width) {
+    width: 310px;
+    margin-left: auto;
+  }
+}
+
+.flying-cost__header {
+  @media (min-width: @tablet-width) {
+    width: 310px;
+    margin-left: auto;
+  }
+}
+
+.flying-cost__img {
+  position: absolute;
+  top: -146px;
+  left: 50%;
+
+  margin-left: -145px;
+
+  @media (min-width: @tablet-width) {
+    top: -46px;
+    left: 50px;
+
+    margin: 0;
+  }
+}

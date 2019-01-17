@@ -1,0 +1,29 @@
+.list-info {
+  position: relative;
+
+  .list-reset();
+}
+
+.list-info__item label {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
+  }
+}
+
+#mars-info:checked ~ .list-info__text,
+#technologies:checked ~ .list-info__text,
+#journey:checked ~ .list-info__text,
+#live-on-mars:checked ~ .list-info__text {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 425px;
+    top: 0;
+    right: 0;
+  }
+}

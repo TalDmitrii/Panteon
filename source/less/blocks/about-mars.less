@@ -1,0 +1,39 @@
+.about-mars {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+}
+
+.about-mars__inner-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.about-mars__info {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+}
+
+.about-mars__properties-wrapper {
+  order: -1;
+
+  margin-bottom: 48px;
+
+  overflow-x: scroll;
+
+  background-color: #fff5f8;
+}
+
+.about-mars__header {
+  padding-left: 15px;
+
+  .heading-h2();
+}
+
+
