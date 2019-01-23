@@ -28,13 +28,13 @@
   }
 }
 
-.features-list__text--header {
+.features-list__text-header {
   .heading-h3();
 
   margin-bottom: 20px;
 }
 
-.features-list__text--button {
+.features-list__text-button {
   width: 160px;
   height: 46px;
   display: block;
@@ -52,6 +52,17 @@
 
   border-radius: 23px;
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: fade(@main-color, 75%);
+    box-shadow: 0 0 27px rgba(197, 41, 176, 0.78);
+  }
+
+  &:active {
+    background-color: fade(@main-color, 45%);
+    box-shadow: 0 0 27px rgba(197, 41, 176, 0.78);
+  }
 }
 
 .features-list__item img {

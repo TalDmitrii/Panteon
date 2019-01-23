@@ -33,4 +33,17 @@
 
   text-decoration: none;
   border-bottom: 1px solid white;
+
+  &:hover,
+  &:focus {
+    color: @main-color;
+
+    border-bottom: 1px solid @main-color;
+  }
+
+  &:active {
+    color: fade(@main-color, 50%);
+
+    border-bottom: 1px solid fade(@main-color, 50%);
+  }
 }
