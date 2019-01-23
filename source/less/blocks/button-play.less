@@ -1,0 +1,40 @@
+.button-play {
+    width: 52px;
+    height: 52px;
+    
+    background-color: @main-color;
+  
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  
+    &::after {
+      width: 0;
+      height: 0;
+      content: "";
+      position: absolute;
+      left: 21px;
+      top: 20px;
+  
+      border-top: 7px solid transparent;
+      border-left: 15px solid white;
+      border-bottom: 7px solid transparent;
+    }
+  }
+
+  .button-play span {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      width: 125px;
+      display: block;
+      position: absolute;
+      left: 67px;
+      top: 15px;
+
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      color: white;
+    }
+  }

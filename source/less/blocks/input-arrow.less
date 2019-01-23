@@ -1,0 +1,72 @@
+.input-arrow {
+  width: 8px;
+  height: 15px;
+  position: absolute;
+  right: 0;
+  top: 32px;
+
+  font-size: 0;
+
+  margin-top: -7px;
+
+  &::after,
+  &::before {
+    width: 2px;
+    content: "";
+    position: absolute;
+
+    background-color: fade(white, 40%);
+  }
+
+  &::after {
+    height: 10px;
+    bottom: -1px;
+    left: 1px;
+
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    height: 12px;
+    top: -3px;
+    left: 1px;
+
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 214px;
+  }
+}
+
+.list-info__item input:checked ~ .input-arrow {
+  @media (max-width: @tablet-width - 1px) {
+    transform: rotate(-90deg);
+
+    &::after,
+    &::before {
+      background-color: white;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      box-shadow: 5px 5px 0 0 fade(white, 50%),
+                  10px 10px 0 0 fade(white, 20%);
+    }
+
+    &::after {
+      box-shadow: 5px -5px 0 0 fade(white, 50%),
+                  10px -10px 0 0 fade(white, 20%);
+    }
+
+    &::after,
+    &::before {
+      width: 2px;
+      content: "";
+      position: absolute;
+
+      background-color: white;
+    }
+  }
+}

@@ -1,9 +1,26 @@
 .organization-of-life {
-  padding-top: 52px;
+  padding-top: 42px;
+  padding-bottom: 40px;
   padding-right: 15px;
   padding-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+  }
 }
 
 .organization-of-life__header {
   .heading-h2();
+
+  font-size: 34px;
+
+  margin-bottom: 30px;
 }

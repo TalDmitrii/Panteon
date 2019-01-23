@@ -1,8 +1,53 @@
-.button-down {
+.button-down a {
   width: 59px;
   height: 59px;
+  display: block;
+  position: relative;
 
   background-color: fade(@main-color, 50%);
 
   border-radius: 50%;
+
+  &::before {
+    width: 16px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    top: 31px;
+    left: 15px;
+
+    background-color: white;
+    
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    width: 14px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 26px;
+
+    background-color: white;
+
+    box-shadow: 5px -5px 0 0 white;
+    
+    transform: rotate(-45deg);
+  }
+  
+  @media (min-width: @tablet-width) {
+    width: 75px;
+    height: 75px;
+
+    &::before {
+      top: 39px;
+      left: 23px;
+    }
+
+    &::after {
+      top: 40px;
+      left: 34px;
+    }
+  }
 }

@@ -1,36 +1,91 @@
 .flying-cost {
+  max-width: 520px;
   position: relative;
 
-  padding-top: 183px;
+  margin: 0 auto;
+  padding-top: 180px;
   padding-bottom: 53px;
   padding-left: 15px;
   padding-right: 15px;
 
+  background-color: #a12d75;
   background-image: url("../img/start-rocket.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: @tablet-width) {
+    max-width: 721px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    padding-top: 50px;
-  }
-}
+    padding: 50px 33px;
+    padding-bottom: 59px;
 
-.flying-cost__text {
-  @media (min-width: @tablet-width) {
-    width: 310px;
-    margin-left: auto;
+    background-image: url("../img/start-rocket-tablet.jpg");
+    background-size: 100% 100%;
+
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    align-items: flex-start;
+
+    padding-top: 58px;
+    padding-bottom: 52px;
+    padding-left: 398px;
+    padding-right: 63px;
+
+    background-image: url("../img/start-rocket-desktop.jpg");
   }
 }
 
 .flying-cost__header {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: white;
+
+  margin: 0;
+  margin-bottom: 18px;
+
   @media (min-width: @tablet-width) {
     width: 310px;
-    margin-left: auto;
+    margin-left: 383px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
+    margin-left: 0;
+  }
+}
+
+.flying-cost__text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: white;
+
+  margin: 0;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 310px;
+    margin-left: 383px;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 612px;
+
+    margin-bottom: 37px;
+    margin-left: 0;
+  }
+}
+
+.flying-cost__text b {
+  font-weight: 700;
 }
 
 .flying-cost__img {
@@ -41,8 +96,19 @@
   margin-left: -145px;
 
   @media (min-width: @tablet-width) {
+    width: 253px;
+    height: 253px;
     top: -46px;
     left: 50px;
+
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 310px;
+    height: 310px;
+    top: -27px;
+    left: 27px;
 
     margin: 0;
   }

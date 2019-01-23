@@ -2,28 +2,97 @@
   position: relative;
 
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    min-height: 555px;
+  }
+}
+
+.list-info__text {
+  display: none;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 425px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 760px;
+
+    margin-left: 95px;
+  }
+}
+
+.list-info__text-header {
+  display: none;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+
+  margin-top: 20px;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.list-info__item {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .list-info__item label {
+  width: 200px;
   display: block;
-  padding-top: 25px;
+  position: relative;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #908bb1;
+
+  padding-top: 20px;
   padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    width: 285px;
+    width: 190px;
   }
 }
 
-#mars-info:checked ~ .list-info__text,
-#technologies:checked ~ .list-info__text,
-#journey:checked ~ .list-info__text,
-#live-on-mars:checked ~ .list-info__text {
+.list-info__item input:checked ~ label {
+  font-weight: 700;
+  color: white;
+}
+
+.list-info__item input:checked ~ .list-info__text {
   display: block;
+}
 
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    width: 425px;
-    top: 0;
-    right: 0;
+@media (min-width: @tablet-width) {
+  .list-info__item:nth-child(2) input:checked ~ .list-info__text {
+    margin-top: -70px;
+  }
+  
+  .list-info__item:nth-child(3) input:checked ~ .list-info__text {
+    margin-top: -70px * 2;
+  }
+  
+  .list-info__item:nth-child(4) input:checked ~ .list-info__text {
+    margin-top: (-70px * 3) - 20px;
   }
 }
+
