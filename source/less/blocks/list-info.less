@@ -76,10 +76,18 @@
 .list-info__item input:checked ~ label {
   font-weight: 700;
   color: white;
+
+  // @media (min-width: @tablet-width) {
+  //   float: left;
+  // }
 }
 
 .list-info__item input:checked ~ .list-info__text {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    float: right;
+  }
 }
 
 @media (min-width: @tablet-width) {
