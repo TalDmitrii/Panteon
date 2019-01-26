@@ -1,0 +1,131 @@
+.logo__outer-round {
+  width: 39px;
+  height: 39px;
+
+  border: 3px solid @main-color;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+
+  animation-name: spinlogo;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+
+  &::after {
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    content: "";
+
+    background-color: @main-color;
+
+    border-radius: 50%;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 48px;
+    height: 48px;
+
+    &::after {
+      width: 9px;
+      height: 9px;
+    }
+  }
+}
+  
+.logo__middle-round {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  margin-left: -13px;
+  margin-top: -13px;
+  
+  border: 3px solid @main-color;
+  border-radius: 50%;
+  
+  box-sizing: border-box;  
+  
+  animation-name: spinlogo;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  
+  &::after {
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    content: "";
+    top: -3px;
+  
+    background-color: @main-color;
+  
+    border-radius: 50%;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 32px;
+    height: 32px;
+
+    margin-left: -16px;
+    margin-top: -16px;
+
+    &::after {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+  
+.logo__inner-round {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  border: 3px solid @main-color;
+  border-radius: 50%;
+  
+  box-sizing: border-box;
+  
+  transform: translate(-50%, -50%);
+
+  @media (min-width: @tablet-width) {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.logo--footer .logo__outer-round {
+  border-color: white;
+  
+  &::after {
+    background-color: white;
+  }
+}
+
+.logo--footer .logo__middle-round {
+  border-color: white;
+
+  &::after {
+    background-color: white;
+  }
+}
+
+.logo--footer .logo__inner-round {
+  border-color: white;
+}
+  
+@keyframes spinlogo {
+  0% {
+    transform: rotate(0deg);
+  }
+ 
+  100% {
+    transform: rotate(360deg);
+  }
+}

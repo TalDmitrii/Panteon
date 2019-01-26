@@ -3,10 +3,30 @@
 
   margin: 0;
 
+  animation-name: move-navigation;
+  animation-duration: 0.5s;
+
   @media (min-width: @tablet-width) {
     width: 400px;
+    position: absolute;
+    top: 100px;
+    right: 20px;
 
     margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 0;
+  }
+}
+
+@keyframes move-navigation {
+  0% {
+    transform: translateX(500px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -40,4 +60,8 @@
   font-size: 12px;
 
   box-shadow: 0 0 8px 0 rgb(147, 224, 182);
+}
+
+.main-navigation--closed .site-navigation {
+  display: none;
 }
