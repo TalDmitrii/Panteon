@@ -17,12 +17,19 @@
 
   @media (min-width: @tablet-width) {
     width: 425px;
+    margin-left: auto;
   }
 
   @media (min-width: @desktop-width) {
     width: 760px;
+  }
+}
 
-    margin-left: 95px;
+.list-info__input {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -47,12 +54,6 @@
   @media (min-width: @tablet-width) {
     position: static;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  @media (min-width: @desktop-width) {
-    justify-content: flex-start;
   }
 }
 
@@ -70,6 +71,29 @@
 
   @media (min-width: @tablet-width) {
     width: 190px;
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .list-info__item:nth-child(2) label,
+  .list-info__item:nth-child(2) .list-info__input {
+    top: 69px;
+  }
+
+  .list-info__item:nth-child(3) label,
+  .list-info__item:nth-child(3) .list-info__input {
+    top: 69px * 2;
+  }
+
+  .list-info__item:nth-child(4) label,
+  .list-info__item:nth-child(4) .list-info__input {
+    top: (69px * 3) + 20px;
+  }
+
+  .list-info__item .list-info__input {
+    left: 210px;
   }
 }
 
@@ -80,19 +104,5 @@
 
 .list-info__item input:checked ~ .list-info__text {
   display: block;
-}
-
-@media (min-width: @tablet-width) {
-  .list-info__item:nth-child(2) input:checked ~ .list-info__text {
-    margin-top: -70px;
-  }
-  
-  .list-info__item:nth-child(3) input:checked ~ .list-info__text {
-    margin-top: -70px * 2;
-  }
-  
-  .list-info__item:nth-child(4) input:checked ~ .list-info__text {
-    margin-top: (-70px * 3) - 20px;
-  }
 }
 
