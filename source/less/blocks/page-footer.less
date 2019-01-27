@@ -5,20 +5,39 @@
   padding-bottom: 31px;
 
   background-color: #901c63;
-  background-image: url("../img/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
   @media (min-width: @tablet-width) {
     padding-top: 73px;
-
-    background-image: url("../img/footer-bg-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 110px;
+  }
+}
 
+.no-webp .page-footer {
+  background-image: url("../img/footer-bg.jpg");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/footer-bg-tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
     background-image: url("../img/footer-bg-desktop.jpg");
+  }
+}
+
+.webp .page-footer {
+  background-image: url("../img/footer-bg.webp");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/footer-bg-tablet.webp");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/footer-bg-desktop.webp");
   }
 }
 

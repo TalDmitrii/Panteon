@@ -1,10 +1,31 @@
 .about-mars {
+  padding-top: 23px;
+
+  background-image: url("../img/solar-system.svg");
+  background-position: 70% 100%;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 46px;
+
+    background-image: url("../img/solar-system-tablet.svg");
+    background-position: 75% bottom;
+    background-size: auto auto;
+  }
+}
+
+.about-mars__content-wrapper {
   max-width: @desktop-width;
 
   display: flex;
   flex-direction: column;
 
   margin: 0 auto;
+  padding-bottom: 150px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 240px;
+  }
 }
 
 .about-mars__inner-wrapper {
@@ -38,6 +59,12 @@
 
   @media (min-width: @desktop-width) {
     margin-right: 55px;
+  }
+}
+
+.about-mars__info:last-child {
+  @media (min-width: @tablet-width) {
+    max-width: 385px;
   }
 }
 

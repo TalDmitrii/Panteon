@@ -124,25 +124,27 @@
         </ul>
       </section>
       <section class="about-mars">
-        <h2 class="about-mars__header">
-          Марс. <br> Вспомнить всё
-        </h2>
-        <div class="about-mars__inner-wrapper">
-          <div class="about-mars__info">
-            <h3 class="about-mars__info-header">Что такое Марс?</h3>
-            <p class="about-mars__info-text">
-              Планета Солнечной системы, названа в честь Марса — древнеримского бога войны. Иногда Марс называют «красной планетой» 
-              из-за красного оттенка поверхности, придаваемого ей оксидом железа.
-            </p>
-            <p class="about-mars__info-text">
-              Особенности планеты — наличие слабой атмосферы, состоящей в основном из углекислого газа, времена года, пылевые бури, сильная эррозия почв.               
-            </p>
-          </div>
-          <div class="about-mars__info">
-            <h3 class="about-mars__info-header">Где это? Как туда доехать?</h3>
-            <p class="about-mars__info-text">
-              Расстояние до Марса — почти 56 миллионов километров. <br>Чтобы преодолеть такое расстояние, нужно лететь на межпланетном корабле 7-8 месяцев.               
-            </p>
+        <div class="about-mars__content-wrapper">
+          <h2 class="about-mars__header">
+            Марс. <br> Вспомнить всё
+          </h2>
+          <div class="about-mars__inner-wrapper">
+            <div class="about-mars__info">
+              <h3 class="about-mars__info-header">Что такое Марс?</h3>
+              <p class="about-mars__info-text">
+                Планета Солнечной системы, названа в честь Марса — древнеримского бога войны. Иногда Марс называют «красной планетой» 
+                из-за красного оттенка поверхности, придаваемого ей оксидом железа.
+              </p>
+              <p class="about-mars__info-text">
+                Особенности планеты — наличие слабой атмосферы, состоящей в основном из углекислого газа, времена года, пылевые бури, сильная эррозия почв.               
+              </p>
+            </div>
+            <div class="about-mars__info">
+              <h3 class="about-mars__info-header">Где это? Как туда доехать?</h3>
+              <p class="about-mars__info-text">
+                Расстояние до Марса — почти 56 миллионов километров. <br>Чтобы преодолеть такое расстояние, нужно лететь на межпланетном корабле 7-8 месяцев.               
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -158,6 +160,9 @@
             писателей, учёных: создать внеземную цивилизацию. 
           </p>
           <picture>
+            <source type="image/webp" media="(min-width: 1170px)" srcset="img/mask-photo-desktop.webp">
+            <source type="image/webp" srcset="img/mask-photo.webp">
+
             <source media="(min-width: 1170px)" srcset="img/mask-photo-desktop.jpg">
             <img class="author__img" src="img/mask-photo.jpg" width="165" height="189" alt="Фотография Илона Маска">
           </picture>
@@ -175,7 +180,11 @@
         </div>
         <div class="project-realization__flying-cost flying-cost">
           <h3 class="flying-cost__header">Стоимость перелёта</h3>
-          <img class="flying-cost__img" width="289" height="289" src="img/rocket.jpg" alt="Фотография ракеты">
+          <picture>
+            <source type="image/webp" srcset="img/rocket.webp">
+
+            <img class="flying-cost__img" width="289" height="289" src="img/rocket.jpg" alt="Фотография ракеты">
+          </picture>
           <p class="flying-cost__text">
             Высадка двоих астронавтов на Луну обошлась США в 20 млрд. долларов. <br>Маск стремится сократить эту цифру в 20 000 раз, что составит <b>500 000 долларов</b> на человека.
           </p>
@@ -225,9 +234,9 @@
                 <label for="technologies">Готовы ли технологии?</label>
                 <span class="input-arrow">Стрелка-индикатор</span>
                 <div class="list-info__text">
-                    <h3 class="list-info__text-header">
-                      Готовы ли технологии?
-                    </h3>
+                  <h3 class="list-info__text-header">
+                    Готовы ли технологии?
+                  </h3>
                   <p class="list-info__text--intro">
                     Одной из основных проблем экспедиций (как к Луне, так и к Марсу) являлась разработка сверхтяжелой ракеты-носителя для вывода на орбиту космического корабля (или его элементов). 
                     В СССР в 1960-х годах велась разработка такой ракеты — Н-1. После проигрыша «лунной гонки» в конце 1960-х было понятно, 
@@ -282,7 +291,13 @@
             <input class="visually-hidden" type="radio" name="organization" id="living" checked>
             <label class="features-list__item--icon-cup" for="living">Проживание</label>
             <div class="features-list__inner-wrapper">
-              <img src="img/base-interior.jpg" width="262" height="125" alt="Интерьер помещения колонии">
+              <picture>
+                <source type="image/webp" media="(min-width: 770px)" srcset="img/base-interior-tablet.webp">
+                <source type="image/webp" srcset="img/base-interior.webp">
+    
+                <source media="(min-width: 770px)" srcset="img/base-interior-tablet.jpg">
+                <img src="img/base-interior.jpg" width="262" height="125" alt="Интерьер помещения колонии">
+              </picture>
               <h3 class="features-list__text-header">Проживание</h3>
               <p class="features-list__text">
                 В основе жилых помещений лежат надувные компоненты — спальня, рабочая зона, гостиная, парник для выращивания зелени — 50 м2 на человека. 
@@ -295,7 +310,13 @@
             <input class="visually-hidden" type="radio" name="organization" id="work">
             <label class="features-list__item--icon-helmet" for="work">Работа</label>
             <div class="features-list__inner-wrapper">
-              <img src="img/base-interior.jpg" width="262" height="125" alt="Интерьер помещения колонии">
+              <picture>
+                <source type="image/webp" media="(min-width: 770px)" srcset="img/base-interior-tablet.webp">
+                <source type="image/webp" srcset="img/base-interior.webp">
+    
+                <source media="(min-width: 770px)" srcset="img/base-interior-tablet.jpg">
+                <img src="img/base-interior.jpg" width="262" height="125" alt="Интерьер помещения колонии">
+              </picture>
               <h3 class="features-list__text-header">Работа</h3>
               <p class="features-list__text">
                 В основе жилых помещений лежат надувные компоненты — спальня, рабочая зона, гостиная, парник для выращивания зелени — 50 м2 на человека. 
@@ -308,7 +329,13 @@
             <input class="visually-hidden" type="radio" name="organization" id="search">
             <label class="features-list__item--icon-search" for="search">Исследования</label>
             <div class="features-list__inner-wrapper">
-              <img src="img/base-interior.jpg" width="262" height="125" alt="Интерьер помещения колонии">
+              <picture>
+                <source type="image/webp" media="(min-width: 770px)" srcset="img/base-interior-tablet.webp">
+                <source type="image/webp" srcset="img/base-interior.webp">
+    
+                <source media="(min-width: 770px)" srcset="img/base-interior-tablet.jpg">
+                <img src="img/base-interior.jpg" width="262" height="125" alt="Интерьер помещения колонии">
+              </picture>
               <h3 class="features-list__text-header">Исследования</h3>
               <p class="features-list__text">
                 В основе жилых помещений лежат надувные компоненты — спальня, рабочая зона, гостиная, парник для выращивания зелени — 50 м2 на человека. 
@@ -321,7 +348,13 @@
             <input class="visually-hidden" type="radio" name="organization" id="photo-icon">
             <label class="features-list__item--icon-photo" for="photo-icon">Фотографирование</label>
             <div class="features-list__inner-wrapper">
-              <img src="img/base-interior.jpg" width="262" height="125" alt="Интерьер помещения колонии">
+              <picture>
+                <source type="image/webp" media="(min-width: 770px)" srcset="img/base-interior-tablet.webp">
+                <source type="image/webp" srcset="img/base-interior.webp">
+    
+                <source media="(min-width: 770px)" srcset="img/base-interior-tablet.jpg">
+                <img src="img/base-interior.jpg" width="262" height="125" alt="Интерьер помещения колонии">
+              </picture>
               <h3 class="features-list__text-header">Фотографирование</h3>
               <p class="features-list__text">
                 В основе жилых помещений лежат надувные компоненты — спальня, рабочая зона, гостиная, парник для выращивания зелени — 50 м2 на человека. 
@@ -334,7 +367,13 @@
             <input class="visually-hidden" type="radio" name="organization" id="agro">
             <label class="features-list__item--icon-agro" for="agro">Продовольствие</label>
             <div class="features-list__inner-wrapper">
-              <img src="img/base-interior.jpg" width="262" height="125" alt="Интерьер помещения колонии">
+              <picture>
+                <source type="image/webp" media="(min-width: 770px)" srcset="img/base-interior-tablet.webp">
+                <source type="image/webp" srcset="img/base-interior.webp">
+    
+                <source media="(min-width: 770px)" srcset="img/base-interior-tablet.jpg">
+                <img src="img/base-interior.jpg" width="262" height="125" alt="Интерьер помещения колонии">
+              </picture>
               <h3 class="features-list__text-header">Продовольствие</h3>
               <p class="features-list__text">
                 В основе жилых помещений лежат надувные компоненты — спальня, рабочая зона, гостиная, парник для выращивания зелени — 50 м2 на человека. 
@@ -433,6 +472,7 @@
         </div>
       </div> 
     </footer>
+    <script src="js/webp-support.min.js"></script>
     <script src="js/picturefill.min.js"></script>
     <script src="js/main-navigation.min.js"></script>
   </body>

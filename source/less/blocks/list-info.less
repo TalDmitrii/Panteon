@@ -45,6 +45,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
+    position: static;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -58,7 +59,6 @@
 .list-info__item label {
   width: 200px;
   display: block;
-  position: relative;
 
   font-size: 16px;
   font-weight: 400;
@@ -76,18 +76,10 @@
 .list-info__item input:checked ~ label {
   font-weight: 700;
   color: white;
-
-  // @media (min-width: @tablet-width) {
-  //   float: left;
-  // }
 }
 
 .list-info__item input:checked ~ .list-info__text {
   display: block;
-
-  @media (min-width: @tablet-width) {
-    float: right;
-  }
 }
 
 @media (min-width: @tablet-width) {

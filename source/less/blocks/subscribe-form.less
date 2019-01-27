@@ -4,7 +4,6 @@
   padding-bottom: 66px;
 
   background-color: #41295f;
-  background-image: url("../img/base-photo.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
@@ -21,8 +20,22 @@
 
     padding-top: 64px;
     padding-bottom: 75px;
+  }
+}
 
+.no-webp .subscribe-form {
+  background-image: url("../img/base-photo.jpg");
+
+  @media (min-width: @desktop-width) {
     background-image: url("../img/base-photo-desktop.jpg");
+  }
+}
+
+.webp .subscribe-form {
+  background-image: url("../img/base-photo.webp");
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/base-photo-desktop.webp");
   }
 }
 

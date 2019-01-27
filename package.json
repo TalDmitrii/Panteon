@@ -8,6 +8,7 @@
     "del": "^3.0.0",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-less": "4.0.x",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
@@ -15,6 +16,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.1",
+    "gulp-webp": "^4.0.1",
     "posthtml-include": "^1.2.0"
   },
   "scripts": {

@@ -5,27 +5,27 @@
 
   background-color: transparent;
 
-  border: none;
   outline: none;
+  border: none;
   cursor: pointer;
 }
 
 .burger:hover .burger__bar,
 .burger:focus .burger__bar {
-  background-color: fade(white, 65%);
+  background-color: fade(white, 45%);
 
   &::before,
   &::after {
-    background-color: fade(white, 65%);
+    background-color: fade(white, 45%);
   }
 }
 
 .burger:active .burger__bar {
-  background-color: fade(white, 35%);
+  background-color: fade(white, 25%);
 
   &::before,
   &::after {
-    background-color: fade(white, 35%);
+    background-color: fade(white, 25%);
   }
 }
 
@@ -52,8 +52,9 @@
     width: 75%;
     height: 2px;
     position: absolute;
+    left: 0;
     content: "";
-    transform: translate(-24px, -10px);   
+    transform: translateY(-8px);   
 
     background-color: white;
     transition-duration: 0.7s;
@@ -64,8 +65,9 @@
     width: 40%;
     height: 2px;
     position: absolute;
+    left: 0;
     content: "";
-    transform: translate(-24px, 10px);
+    transform: translateY(8px);
 
     background-color: white;
     transition-duration: 0.7s;

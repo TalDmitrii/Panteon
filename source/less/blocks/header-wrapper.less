@@ -1,9 +1,19 @@
 .header-wrapper {
   background-color: #a12d75;
-  background-image: url("../img/header-bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+
+  @media (min-width: @tablet-width) {
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: cover;
+  }
+}
+
+.no-webp .header-wrapper {
+  background-image: url("../img/header-bg.jpg");
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/header-bg-tablet.jpg");
@@ -11,6 +21,17 @@
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/header-bg-desktop.jpg");
-    background-size: cover;
+  }
+}
+
+.webp .header-wrapper {
+  background-image: url("../img/header-bg.webp");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/header-bg-tablet.webp");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/header-bg-desktop.webp");
   }
 }

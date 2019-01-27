@@ -5,7 +5,6 @@
 
   margin-bottom: 81px;
 
-  background-image: url("../img/panorama-olimp.png");
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -18,8 +17,6 @@
     height: 260px;
 
     margin-bottom: 57px;
-
-    background-image: url("../img/panorama-olimp-tablet.png");
   }
 
   @media (min-width: @desktop-width) {
@@ -27,8 +24,30 @@
     height: 292px;
 
     margin-bottom: 24px;
+  }
+}
 
+.no-webp .video {
+  background-image: url("../img/panorama-olimp.png");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/panorama-olimp-tablet.png");
+  }
+
+  @media (min-width: @desktop-width) {
     background-image: url("../img/panorama-olimp-desktop.png");
+  }
+}
+
+.webp .video {
+  background-image: url("../img/panorama-olimp.webp");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/panorama-olimp-tablet.webp");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/panorama-olimp-desktop.webp");
   }
 }
 

@@ -10,7 +10,6 @@
   padding-right: 15px;
 
   background-color: #1a1b43;
-  background-image: url("../img/space-nebula.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -22,8 +21,6 @@
     padding-left: 24px;
     padding-right: 24px;
 
-    background-image: url("../img/space-nebula-tablet.jpg");
-
     box-sizing: border-box;
   }
 
@@ -32,8 +29,30 @@
 
     padding: 0;
     padding-top: 100px;
+  }
+}
 
+.no-webp .about-journey {
+  background-image: url("../img/space-nebula.jpg");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/space-nebula-tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
     background-image: url("../img/space-nebula-desktop.jpg");
+  }
+}
+
+.webp .about-journey {
+  background-image: url("../img/space-nebula.webp");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/space-nebula-tablet.webp");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/space-nebula-desktop.webp");
   }
 }
 
@@ -94,8 +113,7 @@ button.about-journey__button-play {
 
   margin: 0 auto;
   margin-bottom: 46px;
-
-  background-image: url("../img/walk-on-mars.png");
+  
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -106,16 +124,26 @@ button.about-journey__button-play {
     height: 361px;
 
     margin-bottom: 60px;
-
-    background-image: url("../img/walk-on-mars-tablet.png");
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
     height: 572px;
+  }
+}
 
-    margin-bottom: 60px;
+.no-webp .about-journey__video-wrapper {
+  background-image: url("../img/walk-on-mars.png");
 
+  @media (min-width: @tablet-width) {
     background-image: url("../img/walk-on-mars-tablet.png");
+  }
+}
+
+.webp .about-journey__video-wrapper {
+  background-image: url("../img/walk-on-mars.webp");
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/walk-on-mars-tablet.webp");
   }
 }
