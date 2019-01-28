@@ -18,6 +18,30 @@
 
     border-radius: 50%;
   }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    display: flex;
+
+    padding-top: 30px;
+
+    border: none;
+
+    &::after {
+      top: -5px;
+      left: 693px;
+    }
+
+    &::before {
+      width: 698px;
+      height: 3px;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background-color: @main-color;
+    }
+  }
 }
 
 .features-list__item {
@@ -25,6 +49,12 @@
 
   &:not(:last-child) {
     padding-bottom: 40px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    &:last-child {
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -125,11 +155,22 @@
 
     border-radius: 50%;
   }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    &::after {
+      top: -35px;
+      left: 0;
+    }
+  }
 }
 
 .features-list__item:last-child label {
   &::after {
     top: 7px;
+
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+      top: -35px;
+    }
   }
 }
 
@@ -182,5 +223,44 @@ label.features-list__item--icon-agro {
     background-color: @main-color;
 
     box-shadow: none;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .features-list__item label {
+    width: 100%;
+  }
+
+  .features-list__item {
+    padding-left: 0;
+    float: right;
+  }
+
+  .features-list img {
+    width: 719px;
+    height: 334px;
+  }
+
+  .features-list__item:nth-child(1) input:checked ~ .features-list__inner-wrapper {
+    margin-right: -47px * 4;
+  }
+
+  .features-list__item:nth-child(2) input:checked ~ .features-list__inner-wrapper {
+    margin-left: -47px * 1;
+    margin-right: -47px * 3;
+  }
+
+  .features-list__item:nth-child(3) input:checked ~ .features-list__inner-wrapper {
+    margin-left: -47px * 2;
+    margin-right: -47px * 2;
+  }
+
+  .features-list__item:nth-child(4) input:checked ~ .features-list__inner-wrapper {
+    margin-left: -47px * 3;
+    margin-right: -47px * 1;
+  }
+
+  .features-list__item:nth-child(5) input:checked ~ .features-list__inner-wrapper {
+    margin-left: -47px * 4;
   }
 }
