@@ -97,6 +97,16 @@
 
 .features-list__item img {
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    width: 719px;
+    height: 334px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 985px;
+    height: 457px;
+  }
 }
 
 .features-list__text {
@@ -107,10 +117,18 @@
 
   margin: 0;
   margin-bottom: 35px;
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
 }
 
 .features-list__inner-wrapper {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 117px;
+  }
 }
 
 .features-list__item input:checked ~ .features-list__inner-wrapper {
@@ -156,7 +174,7 @@
     border-radius: 50%;
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     &::after {
       top: -35px;
       left: 0;
@@ -168,7 +186,7 @@
   &::after {
     top: 7px;
 
-    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
       top: -35px;
     }
   }
@@ -224,9 +242,29 @@ label.features-list__item--icon-agro {
 
     box-shadow: none;
   }
+
+  @media (min-width: @desktop-width) {
+    text-align: end;
+
+    padding-left: 0;
+    padding-right: 30px;
+
+    transform: rotate(-90deg) translate(-115px, -110px);
+
+    &::before {
+      left: 230px;
+
+      transform: rotate(90deg);
+    }
+
+    &::after {
+      top: -40px;
+      left: 240px;
+    }
+  }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
   .features-list__item label {
     width: 100%;
   }
@@ -262,5 +300,27 @@ label.features-list__item--icon-agro {
 
   .features-list__item:nth-child(5) input:checked ~ .features-list__inner-wrapper {
     margin-left: -47px * 4;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features-list__item:nth-child(1) input:checked ~ .features-list__inner-wrapper {
+    margin-top: -47px;
+  }
+
+  .features-list__item:nth-child(2) input:checked ~ .features-list__inner-wrapper {
+    margin-top: -135px;
+  }
+
+  .features-list__item:nth-child(3) input:checked ~ .features-list__inner-wrapper {
+    margin-top: -223px;
+  }
+
+  .features-list__item:nth-child(4) input:checked ~ .features-list__inner-wrapper {
+    margin-top: -311px;
+  }
+
+  .features-list__item:nth-child(5) input:checked ~ .features-list__inner-wrapper {
+    margin-top: -399px;
   }
 }
