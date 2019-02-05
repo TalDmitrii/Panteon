@@ -35,10 +35,10 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
 });
 gulp.task("js", function () {
@@ -47,7 +47,7 @@ gulp.task("js", function () {
     .pipe(rename({
         suffix: ".min"
     }))
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("source/js"))
 });
 gulp.task("sprite", function () {
   return gulp.src("source/img/*.svg")
@@ -55,7 +55,7 @@ gulp.task("sprite", function () {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("source/img"));
 });
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
